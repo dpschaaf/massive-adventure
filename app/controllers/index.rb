@@ -4,3 +4,9 @@ get '/' do
   erb :map_canvas
 end
 
+
+get '/photo/@:latitude,@longitude' do
+
+
+end
+
