@@ -1,14 +1,14 @@
 $(document).ready(function() {
     // google.maps.event.addDomListener(window, 'load', setBackgroundImage);
     google.maps.event.addDomListener(window, 'load', initializeGoogleMap);
-    google.maps.event.addListener(marker, 'click', toggleBounce)
+    // google.maps.event.addListener(marker, 'click', toggleBounce)
 });
 
 
-function setBackgroundImage() {
-    var imgUrl = document.getElementById("url").innerText
-    document.querySelector('body').style.backgroundImage = "url(" + imgUrl + ")"
-}
+// function setBackgroundImage() {
+//     var imgUrl = document.getElementById("url").innerText
+//     document.querySelector('body').style.backgroundImage = "url(" + imgUrl + ")"
+// }
 
 function initializeGoogleMap() {
     var latitude = document.getElementById('latitude').innerText
@@ -38,10 +38,12 @@ function initializeGoogleMap() {
     });
 }
 
-function toggleBounce() {
-    if (marker.getAnimation() != null) {
-        marker.setAnimation(null);
-    } else {
-        marker.setAnimation(google.maps.Animation.BOUNCE);
-    }
-}
+
+
+// function toggleBounce() {
+//     if (marker.getAnimation() != null) {
+//         marker.setAnimation(null);
+//     } else {
+//         marker.setAnimation(google.maps.Animation.BOUNCE);
+//     }
+// }

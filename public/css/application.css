@@ -1,16 +1,16 @@
-/*body {
+body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top center;
 }
 
-.container {
+/*.container {
   position: fixed;
   margin: 0px auto;
   padding: 0 200px;
-}
+}*/
 
-.nav {
+/*.nav {
   float: left;
   background-color: #444;
   width: 100%;
@@ -23,22 +23,34 @@
   margin: 0 5%;
   list-style: none;
   color: white;
+}*/
+
+.photo-map {
+  display: inline-block;
+  height: 100%;
+  width: auto;
 }
 
-#map-canvas {
+/*#map-canvas {
   height: 100%;
   margin: 0px;
   padding: 0px
-}
+}*/
 
 #my-photo {
-  width: 90%;
-  height: auto;
+  display: inline-block;
+  position: fixed;
+  top: 25%;
+  left: 5%;
+  width: 30%;
 }
 
 #my-photo img {
+  z-index: 999;
+  width: 100%;
+  height: auto;
 
-}*/
+}
 
 html, body, #map-canvas {
         height: 100%;
