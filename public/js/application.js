@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // google.maps.event.addDomListener(window, 'load', setBackgroundImage);
-    // google.maps.event.addDomListener(window, 'load', initializeGoogleMap);
-    // google.maps.event.addListener(marker, 'click', toggleBounce)
+    google.maps.event.addDomListener(window, 'load', initializeGoogleMap);
+    google.maps.event.addListener(marker, 'click', toggleBounce)
 });
 
 
