@@ -1,8 +1,14 @@
 <div class='container'>
+
+  <ul class="nav">
+    <a href="/photos"><li>View Pictures</li></a>
+    <a href="/path"><li>View Travel Path</li></a>
+  </ul>
+
   <div id='my-photo'>
     <script id='latitude' type="text"><%= @photo.latitude %></script>
     <script id='longitude' type="text"><%= @photo.longitude %></script>
-    <img src=<%= @photo.url %>>
+    <script id='url' type="text"><%= @photo.url %></script>
   </div>
-  <div id="map-canvas"/>
+
 </div>

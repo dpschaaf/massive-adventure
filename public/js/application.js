@@ -1,9 +1,15 @@
 $(document).ready(function() {
-    // google.maps.event.addDomListener(window, 'load', initializeTravelPath);
-    google.maps.event.addDomListener(window, 'load', initializeGoogleMap);
-    google.maps.event.addListener(marker, 'click', toggleBounce)
+    // google.maps.event.addDomListener(window, 'load', setBackgroundImage);
+    google.maps.event.addDomListener(window, 'load', initializeTravelPath);
+    // google.maps.event.addDomListener(window, 'load', initializeGoogleMap);
+    // google.maps.event.addListener(marker, 'click', toggleBounce)
 });
 
+
+function setBackgroundImage() {
+    var imgUrl = document.getElementById("url").innerText
+    document.querySelector('body').style.backgroundImage = "url(" + imgUrl + ")"
+}
 
 function initializeGoogleMap() {
     var latitude = document.getElementById('latitude').innerText
@@ -106,6 +112,7 @@ function initializeTravelPath() {
         new google.maps.LatLng(22.281032, 114.151355), // Hong Kong
         new google.maps.LatLng(37.621313, -122.378955) // SFO
     ];
+
     var flightPath = new google.maps.Polyline({
         path: daveTravelCoordinates,
         geodesic: true,

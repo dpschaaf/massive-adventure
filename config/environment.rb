@@ -50,4 +50,3 @@ Dir[APP_ROOT.join('app', 'models', '*.rb')].each { |file| require file }
 require APP_ROOT.join('config', 'database')
 
 # GOOGLE_MAPS_SOURCE = "https://maps.googleapis.com/maps/api/js?key="+ENV['GOOGLE_MAPS_API']+"&sensor=false"
-

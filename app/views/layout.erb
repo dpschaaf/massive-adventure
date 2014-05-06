@@ -7,7 +7,8 @@
 
   <!-- From Google Maps API -->
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-  <script type="text/javascript" src=  "https://maps.googleapis.com/maps/api/js?key=AIzaSyDLKdYfkKZ6SEBg-ym_IFt0Quw_pUeiNxc&sensor=false"<%# GOOGLE_MAPS_SOURCE %> > </script>
+  <meta charset="utf-8">
+  <script type="text/javascript" src=<%= GOOGLE_MAPS_SOURCE %>></script>
 
   <!-- jQuery and JavaScripts -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -20,4 +21,3 @@
   <%= yield %>
 </body>
 </html>
-
