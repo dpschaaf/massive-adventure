@@ -1,27 +1,7 @@
 get '/' do
-  # Look in app/views/index.erb
-  erb :index
+  @photo = Photo.find((1..10).to_a.sample)
+  content_type :json
+  {latitude: @photo.latitude, longitude: @photo.longitude}
+  erb :map_canvas
 end
 
-get '/bands' do
-  @band_names = Band.all.map(&:name)
-  erb :bands
-end
-
-post '/bands' do
-  new_band = Band.create!(name: params[:name])
-  redirect "/bands/#{new_band.id}"
-end
-
-get '/bands/new' do
-  erb :new_band
-end
-
-get '/bands/:id' do
-  @band = Band.find(params[:id])
-  erb :show_band
-end
-
-get '/info' do
-  Demo.new(self).info
-end
