@@ -4,8 +4,10 @@ $(document).ready(function() {
 
 
 function initializeGoogleMap() {
+    var latitude = document.getElementById('latitude').innerText
+    var longitude = document.getElementById('longitude').innerText
     var mapOptions = {
-      center: new google.maps.LatLng(27.173373, 78.037209),
+      center: new google.maps.LatLng(latitude, longitude),
       zoom: 16
     };
     var map = new google.maps.Map(document.getElementById("map-canvas"),

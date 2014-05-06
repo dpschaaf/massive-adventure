@@ -14,4 +14,4 @@ hampi_photos = ['https://lh3.googleusercontent.com/-3k5FYw1a9YI/UoEMa0W6o1I/AAAA
 'https://lh3.googleusercontent.com/-7h8TzM0VH1I/UoERhFZp69I/AAAAAAAABI0/Bwwj988VK8k/w813-h542-no/IMG_0418.JPG',
 'https://lh6.googleusercontent.com/-FyvUEWn4guE/UoER2Ikg5iI/AAAAAAAABJM/jMKABrFDXZA/w813-h542-no/IMG_0429.JPG']
 
-hampi_photos.each { |photo| Photo.create(latitude: HAMPI_LATITUDE + (0..9).to_a.sample*0.0015, latitude: HAMPI_LONGITUDE + (0..9).to_a.sample*0.0015, url: photo) }
+hampi_photos.each { |photo| Photo.create(latitude: HAMPI_LATITUDE + (0..9).to_a.sample*0.0015, longitude: HAMPI_LONGITUDE + (0..9).to_a.sample*0.0015, url: photo) }
