@@ -72,7 +72,9 @@ body {
   position: fixed;
   top: 25%;
   left: 5%;
-  width: 30%;
+  width: 50%;
+  border: 20px solid white;
+
 }
 
 #my-photo img {

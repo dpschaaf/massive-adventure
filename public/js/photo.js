@@ -13,13 +13,14 @@ $(document).ready(function() {
 function initializeGoogleMap() {
     var latitude = document.getElementById('latitude').innerText
     var longitude = document.getElementById('longitude').innerText
-    // var offsetMarkerLongitude = parseFloat(longitude) - 0.01
-    var mapCenter = new google.maps.LatLng(latitude, longitude)
+    var offsetMarkerLongitude = parseFloat(longitude) - 9
+
+    var mapCenter = new google.maps.LatLng(latitude, offsetMarkerLongitude)
     var markerPoint = new google.maps.LatLng(latitude, longitude)
 
     var map = new google.maps.Map(document.getElementById("map-canvas"), {
         center: mapCenter,
-        zoom: 4
+        zoom: 6
     });
 
     // var image = {
