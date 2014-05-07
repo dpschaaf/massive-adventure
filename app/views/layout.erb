@@ -2,22 +2,32 @@
 <html lang="en">
 <head>
 
+  <!-- From Google Maps API -->
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta charset="utf-8">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
 
-  <!-- From Google Maps API -->
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-  <script type="text/javascript" src=  "https://maps.googleapis.com/maps/api/js?key=AIzaSyDLKdYfkKZ6SEBg-ym_IFt0Quw_pUeiNxc&sensor=false"<%# GOOGLE_MAPS_SOURCE %> > </script>
+
+  <script type="text/javascript" src=<%= GOOGLE_MAPS_SOURCE %>></script>
 
   <!-- jQuery and JavaScripts -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
+
 
   <title>Massive Adventure</title>
 </head>
 
 <body>
+  <ul class='nav'>
+    <a href="/"><li>Home</li></a>
+    <a href="/photos"><li>Photos</li></a>
+    <a href="/path"><li>Travel Path</li></a>
+    <a href="/photos/new"><li>Add photo</li></a>
+  </ul>
+
   <%= yield %>
 </body>
 </html>
-
