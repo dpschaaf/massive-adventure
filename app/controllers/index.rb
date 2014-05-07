@@ -39,6 +39,7 @@ get '/albums' do
 end
 
 get '/albums/:id' do
+
   @album = Album.find(params[:id])
 
   @album_data = {title: @album.title,
@@ -51,13 +52,18 @@ get '/albums/:id' do
                  longitude:  @album.longitude}.to_json
 
   @photos = @album.photos
-  @photos_data = @photos.each_with_index.map { |pic, index| [index, {latitude: pic.latitude,
-                                                                    longitude: pic.longitude,
-                                                                    url: pic.url,
-                                                                    title: pic.title,
-                                                                    description: pic.description
-                                                                    }]}
+  @photos_data = Hash[@photos.map { |pic| [pic.id, {latitude: pic.latitude,
+                                                    longitude: pic.longitude,
+                                                    url: pic.url,
+                                                    title: pic.title,
+                                                    description: pic.description
+                                                    }
+                                          ]
+                                  }
+                     ].to_json
+   p @photos_data
 
   content_type :json
   {album: @album_data, photos: @photos_data}.to_json
+
 end
