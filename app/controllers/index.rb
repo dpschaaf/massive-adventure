@@ -17,3 +17,8 @@ get '/path' do
   erb :path
 end
 
+get '/photos/new' do
+
+  erb :new_photo
+end
+

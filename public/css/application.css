@@ -50,7 +50,7 @@ body {
   font-size: 1.5em;
   float: left;
   padding-top: 10px;
-  margin: 0 13%;
+  margin: 0 9%;
   list-style: none;
   color: white;
 }
@@ -81,7 +81,6 @@ body {
   z-index: 999;
   width: 100%;
   height: auto;
-
 }
 
 html, body, #map-canvas {
@@ -89,3 +88,51 @@ html, body, #map-canvas {
         margin: 0px;
         padding: 0px
       }
+
+.new-photo {
+  display: inline-block;
+  position: absolute;
+  left: 30%;
+  z-index: 98;
+  top: 25%;
+  height: 40%;
+  background-color: #444;
+  width: 40%;
+  opacity: 0.8;
+}
+
+.new-photo form {
+  color: white;
+  margin-left: 10%;
+  margin-top: 3%
+}
+
+.new-photo label {
+  font-size: 1.2em;
+  width: 80%;
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+  margin-top: 3%;
+
+}
+
+.new-photo input {
+  display: inline-block;
+  float: right;
+  width: 50%;
+}
+
+.new-photo input[type='submit'] {
+  color: black;
+  float: left;
+  margin-top: 10px;
+  width: 25%;
+  height: 50px;
+}
+
+.new-photo textarea {
+  display: inline-block;
+  float: right;
+  width: 50%;
+}
