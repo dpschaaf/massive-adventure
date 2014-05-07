@@ -1,11 +1,5 @@
 <script src="/js/album.js"></script>
 
-<script type="text/javascript"> <%= @album_json %> </script>
-
-<% @photos_json.each do |pic_json| %>
-  <script type="text/javascript" id=<%= pic_json[0] %> > <%= pic_json[1] %></script>
-<% end %>
-
 
 <div id="map-canvas"></div>
 
