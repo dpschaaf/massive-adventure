@@ -6,6 +6,7 @@ class CreatePhotos < ActiveRecord::Migration
       t.string :url
       t.string :title
       t.string :description
+      t.date :date
       t.timestamps
     end
   end

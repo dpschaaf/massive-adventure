@@ -19,9 +19,9 @@ body {
   left: 30%;
   z-index: 98;
   top: 25%;
-  height: 40%;
+  height: 350px;
   background-color: #444;
-  width: 40%;
+  width: 500px;
   opacity: 0.8;
 }
 
@@ -29,7 +29,8 @@ body {
   color: white;
   text-align: left;
   font-size: 5em;
-  margin-left: 15%
+  margin-left: 50px;
+  margin-bottom: 50px;
 }
 
 
@@ -50,7 +51,7 @@ body {
   font-size: 1.5em;
   float: left;
   padding-top: 10px;
-  margin: 0 9%;
+  margin: 0 6%;
   list-style: none;
   color: #222;
 }
