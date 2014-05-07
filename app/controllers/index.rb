@@ -9,16 +9,27 @@ get '/' do
 end
 
 get '/photos' do
-  @photo = Photo.find((1..10).to_a.sample)
+  @photo = Photo.all.sample
   erb :map_canvas
 end
+
+get '/photos/:id' do
+  @photo = Photo.find(params[:id])
+  erb :map_canvas
+end
+
 
 get '/path' do
   erb :path
 end
 
 get '/photos/new' do
-
   erb :new_photo
+end
+
+post '/photos/new' do
+  Photo.create(params)
+  @id = Photo.all.last.id
+  redirect '/photos/#{@id}'
 end
 
