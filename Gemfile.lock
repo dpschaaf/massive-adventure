@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: https://www.rubygems.org/
   specs:
     activemodel (3.2.12)
       activesupport (= 3.2.12)
@@ -14,6 +14,7 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     backports (3.3.3)
+    bcrypt-ruby (3.1.2)
     builder (3.0.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -23,6 +24,9 @@ GEM
       xpath (~> 2.0)
     daemons (1.1.9)
     diff-lcs (1.2.4)
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
     eventmachine (1.0.3)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
@@ -79,7 +83,9 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   activesupport
+  bcrypt-ruby
   capybara
+  dotenv
   factory_girl
   faker
   pg

@@ -1,27 +1,35 @@
+# require "dotenv"
+# Dotenv.load
+
+GOOGLE_MAPS_SOURCE = "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAPS_API']}&sensor=false"
+
 get '/' do
-  # Look in app/views/index.erb
+  @photo = Photo.all.first
   erb :index
 end
 
-get '/bands' do
-  @band_names = Band.all.map(&:name)
-  erb :bands
+get '/photos' do
+  @photo = Photo.all.sample
+  erb :map_canvas
 end
 
-post '/bands' do
-  new_band = Band.create!(name: params[:name])
-  redirect "/bands/#{new_band.id}"
+get '/photos/:id' do
+  @photo = Photo.find(params[:id])
+  erb :map_canvas
 end
 
-get '/bands/new' do
-  erb :new_band
+
+get '/path' do
+  erb :path
 end
 
-get '/bands/:id' do
-  @band = Band.find(params[:id])
-  erb :show_band
+get '/photos/new' do
+  erb :new_photo
 end
 
-get '/info' do
-  Demo.new(self).info
+post '/photos/new' do
+  Photo.create(params)
+  @id = Photo.all.last.id
+  redirect '/photos/#{@id}'
 end
+
