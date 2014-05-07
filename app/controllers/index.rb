@@ -33,3 +33,26 @@ post '/photos/new' do
   redirect '/photos/#{@id}'
 end
 
+get '/album/:id' do
+  @album = Album.find(params[:id])
+
+  @album_json = {title: @album.title,
+                 description:  @album.description,
+                 city:  @album.city,
+                 country:  @album.country,
+                 arrival_date:  @album.arrival_date,
+                 departure_date:  @album.departure_date,
+                 latitude:  @album.latitude,
+                 longitude:  @album.longitude}.to_json
+
+  @photos = @album.photos
+  @photos_json = @photos.each_with_index.map { |pic, index| [index, {latitude: pic.latitude,
+                                                                    longitude: pic.longitude,
+                                                                    url: pic.url,
+                                                                    title: pic.title,
+                                                                    description: pic.description
+                                                                    }.to_json]
+                                              }
+
+
+end
