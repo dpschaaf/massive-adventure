@@ -41,9 +41,9 @@ body {
   top: 0;
   height: 50px;
   margin: 0 auto;
-  background-color: #444;
+  background-color: white;
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .nav li {
@@ -52,7 +52,7 @@ body {
   padding-top: 10px;
   margin: 0 9%;
   list-style: none;
-  color: white;
+  color: #222;
 }
 
 .photo-map {
@@ -75,7 +75,6 @@ body {
   width: 50%;
   height: auto;
   border: 20px solid white;
-
 }
 
 #my-photo img {
