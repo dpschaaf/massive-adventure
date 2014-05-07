@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.onload = initializeAlbum
+
 });
 
 var initializeAlbum = function() {
@@ -34,7 +35,7 @@ var initializeAlbumMap = function(album, photos) {
 }
 
 var setPhotoMarkers = function(map, photos) {
-  console.log(photos)
+
   for (var i in photos) {
     var current_photo = photos[i];
     var myLatLng = new google.maps.LatLng(current_photo.latitude,
@@ -42,11 +43,17 @@ var setPhotoMarkers = function(map, photos) {
     var marker = new google.maps.Marker({
       position: myLatLng,
       map: map,
-      title: current_photo.title,
+      title: current_photo.id,
       icon: {
         url: current_photo.url,
         scaledSize: new google.maps.Size(65, 43)
       }
     })
+    marker.setValues({type: "point", id: i});
+    google.maps.event.addListener(marker, 'click', loadPhotoPage.bind(marker))
   };
 }
+
+var loadPhotoPage = function(event) {
+  window.location = '/photos/'+this.id
+ };
