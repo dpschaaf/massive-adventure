@@ -18,9 +18,9 @@ album = {
 
 new_album = Album.create(album)
 
-Dir.chdir local_directory
-photos = Dir['*.{JPG,jpg}']
-Dir.chdir APP_ROOT
+#Dir.chdir local_directory
+photos = ["IMG_0031.JPG", "IMG_0088.JPG", "IMG_0145.JPG", "IMG_0259.JPG", "IMG_0332.JPG", "IMG_0353.JPG", "IMG_0451.JPG", "IMG_0482.JPG", "IMG_0648.JPG", "IMG_0763.JPG"] #Dir['*.{JPG,jpg}']
+#Dir.chdir APP_ROOT
 
 dates = []
 
@@ -47,6 +47,7 @@ photos.each do |pic|
 
   new_album.photos.create(photo_info)
 end
-
+dates.compact!
 new_album.arrival_date = dates.min
 new_album.departure_date = dates.max
+new_album.save!
