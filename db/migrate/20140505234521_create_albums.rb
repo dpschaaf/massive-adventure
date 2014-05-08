@@ -3,8 +3,9 @@ class CreateAlbums < ActiveRecord::Migration
     create_table :albums do |t|
       t.string :title
       t.string :description
-      t.string :city
       t.string :country
+      t.string :city
+      t.string :site
       t.date  :arrival_date
       t.date :departure_date
       t.float :latitude
