@@ -114,6 +114,7 @@ namespace :db do
     require APP_ROOT.join('db', 'inle_lake_album.rb')
     require APP_ROOT.join('db', 'singapore_album.rb')
     require APP_ROOT.join('db', 'taj_mahal_album.rb')
+    require APP_ROOT.join('db', 'hampi_album.rb')
   end
 
   desc "Returns the current schema version number"
