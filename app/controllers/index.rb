@@ -50,7 +50,6 @@ get '/albums/all' do
                    departure_date:  album.departure_date,
                    latitude:  album.latitude,
                    longitude:  album.longitude}
-
     [album.id , [album_data, album.photos.sample.url]]
   end
 
