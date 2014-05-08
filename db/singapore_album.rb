@@ -20,3 +20,4 @@ photos = ["IMG_0941.JPG", "IMG_0945.JPG", "IMG_0962.JPG", "IMG_0995.JPG", "IMG_1
 # Dir.chdir APP_ROOT
 
 seed_photo_album(site, new_album, photos, remote_directory)
+
