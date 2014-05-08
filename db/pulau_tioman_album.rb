@@ -33,7 +33,7 @@ photos.each do |pic|
   title: site
   }
 
-  image_data = EXIFR::JPEG.new("#{local_directory}/#{pic}")
+  image_data = EXIFR::JPEG.new("#{remote_directory}/#{pic}")
   if image_data.exif?
     photo_info[:height] = image_data.height #EXIF
     photo_info[:width] = image_data.width #EXIF
