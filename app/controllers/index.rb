@@ -12,12 +12,6 @@ get '/photos' do
   erb :photo
 end
 
-get '/photos/:id' do
-  @photo = Photo.find(params[:id])
-  erb :photo
-end
-
-
 get '/path' do
   erb :path
 end
@@ -32,13 +26,17 @@ post '/photos/new' do
   redirect '/photos/#{@id}'
 end
 
+get '/photos/:id' do
+  @photo = Photo.find(params[:id])
+  erb :photo
+end
 
 get '/albums' do
-
-  erb :album
+  erb :all_albums
 end
 
 get '/albums/all' do
+
   @albums = Album.all
 
   transfer_data = @albums.map do |album|
@@ -50,7 +48,6 @@ get '/albums/all' do
                    departure_date:  album.departure_date,
                    latitude:  album.latitude,
                    longitude:  album.longitude}
-
     [album.id , [album_data, album.photos.sample.url]]
   end
 
@@ -58,8 +55,11 @@ get '/albums/all' do
   Hash[transfer_data].to_json
 end
 
-
 get '/albums/:id' do
+  erb :album
+end
+
+get '/albums/:id/photos' do
 
   @album = Album.find(params[:id])
 
