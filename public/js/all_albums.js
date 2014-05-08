@@ -1,10 +1,8 @@
 $(document).ready(function() {
     window.onload = initializeCollage
-
 });
 
 var initializeCollage = function() {
-
     var request = $.ajax({
         url: '/albums/all',
         type: 'get'
@@ -17,7 +15,7 @@ var initializeCollage = function() {
 var initializeAlbumsCollage = function(albums) {
 
     var mapOptions = {
-        zoom: 5,
+        zoom: 4,
         center: new google.maps.LatLng(15.3129434, 91.0487172),
         mapTypeId: google.maps.MapTypeId.TERRAIN
     };
@@ -51,5 +49,6 @@ var setAlbumMarkers = function(map, albums) {
 }
 
 var loadAlbumPage = function(event) {
+
     window.location = '/albums/' + this.id
 };
