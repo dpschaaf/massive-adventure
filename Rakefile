@@ -110,7 +110,10 @@ namespace :db do
 
   desc "Populate the database with dummy data by running db/seeds.rb"
   task :seed do
-    require APP_ROOT.join('db', 'seeds.rb')
+    require APP_ROOT.join('db', 'pulau_tioman_album.rb')
+    require APP_ROOT.join('db', 'inle_lake_album.rb')
+    require APP_ROOT.join('db', 'singapore_album.rb')
+    require APP_ROOT.join('db', 'taj_mahal_album.rb')
   end
 
   desc "Returns the current schema version number"
