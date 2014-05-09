@@ -19,11 +19,15 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 
 require 'erb'
-# require 'exifr'
+require 'exifr'
 require 'uri'
 require 'carrierwave'
 require 'fog'
 require 'mini_magick'
+require 'carrierwave/storage/ftp'
+
+require 'dotenv'
+Dotenv.load
 
 
 
@@ -123,3 +127,4 @@ end
 #   photo_info[:model] = image_data.model #EXIF
 #   photo_info[:date_time] = image_data.date_time #EXIF
 # end
+

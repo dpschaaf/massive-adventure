@@ -1,37 +1,32 @@
-require 'rubygems'
-require 'carrierwave'
-require 'fog'
-require 'mini_magick'
+# require 'rubygems'
+# require 'carrierwave'
+# require 'carrierwave/storage/ftp'
+# require 'fog'
+# require 'mini_magick'
+# require 'uri'
+# require 'dotenv'
+# Dotenv.load
 
-# storage = Fog::Storage.new({
-#   :local_root => '~/Dave/massive-adventure/fog',
-#   :provider   => 'Local'
-# })
+# CarrierWave.configure do |config|
+#   config.ftp_host = ENV['FTP_HOST']
+#   config.ftp_port = 21
+#   config.ftp_user = ENV['FTP_USERNAME']
+#   config.ftp_passwd = ENV['FTP_PASSWORD']
+#   config.ftp_folder = ENV['FTP_FOLDER']
+#   config.ftp_url = ENV['FTP_URL']
+# end
 
-# # create a directory
-# directory = storage.directories.create(
-#   :key => 'data'
-# )
+# class PhotoUploader < CarrierWave::Uploader::Base
+#   storage :ftp
+# end
 
-# # check storage directories from inside fog
-# p storage.directories
+# # directory ='/Users/Dave/Pictures/Hong Kong - Visit 1/'
+# # file = File.open(directory +'DSCF3250.JPG')
 
-# # create a file inside our new directory
-# file = directory.files.create(
-#   :body => 'Hello World!',
-#   :key  => 'hello_world.txt'
-# )
 
-# # see what files you have from inside fog
-# p directory.files
 
-# # clean up the mess
-# file.destroy
-# directory.destroy
+# # saver = PhotoUploader.new
 
-Fog.mock!
-storage = Fog::Storage.new({
-  :aws_access_key_id      => 'fake_access_key_id',
-  :aws_secret_access_key  => 'fake_secret_access_key',
-  :provider               => 'AWS'
-})
+# # saver.store!(file)
+
+

@@ -17,13 +17,14 @@ gem 'activerecord'
 gem 'rake'
 
 gem 'shotgun'
-gem 'bcrypt-ruby'
+gem 'bcrypt'
 
 gem 'dotenv'
 gem 'exifr'
 gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
+gem 'carrierwave-ftp'
 
 group :test do
   gem 'shoulda-matchers'

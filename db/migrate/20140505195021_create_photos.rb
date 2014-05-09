@@ -3,15 +3,14 @@ class CreatePhotos < ActiveRecord::Migration
     create_table :photos do |t|
       t.float :latitude
       t.float :longitude
-      t.string :url
       t.string :title
       t.string :description
-      t.date :date_time
-      t.integer :height
-      t.integer :width
-      t.float :aspect_ratio
-      t.string :make
-      t.string :model
+      t.date :date_time  #exif
+      t.integer :height  #exif
+      t.integer :width  #exif
+      t.float :aspect_ratio  #exif
+      t.string :make #exif
+      t.string :model #exif
       t.timestamps
     end
   end
