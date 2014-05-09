@@ -18,9 +18,12 @@ gem 'rake'
 
 gem 'shotgun'
 gem 'bcrypt-ruby'
+
 gem 'dotenv'
 gem 'exifr'
-
+gem 'carrierwave'
+gem 'fog'
+gem 'mini_magick'
 
 group :test do
   gem 'shoulda-matchers'

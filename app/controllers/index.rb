@@ -27,8 +27,9 @@ post '/photos/new' do
 end
 
 get '/photos/:id' do
-  @photo = Photo.find(params[:id])
-  erb :photo
+    @photo = Photo.find(params[:id])
+  content_type :json
+  {url: @photo.url}.to_json
 end
 
 get '/albums' do
@@ -82,7 +83,6 @@ get '/albums/:id/photos' do
                                           ]
                                   }
                      ].to_json
-   p @photos_data
 
   content_type :json
   {album: @album_data, photos: @photos_data}.to_json
