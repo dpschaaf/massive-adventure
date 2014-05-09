@@ -21,6 +21,9 @@ require "sinatra/reloader" if development?
 require 'erb'
 # require 'exifr'
 require 'uri'
+require 'carrierwave'
+require 'fog'
+require 'mini_magick'
 
 
 
